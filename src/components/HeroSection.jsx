@@ -46,7 +46,7 @@ export default function HeroSection() {
   return (
     <section id="hero" ref={sectionRef} className="relative w-full" style={{ height: '100vh', minHeight: 700, overflow: 'hidden' }}>
       {/* 3D Particle Background */}
-      <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
+      <div className="absolute inset-0 opacity-100 pointer-events-none" style={{ zIndex: 0 }}>
         <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
           <ambientLight intensity={0.5} />
           <FloatingGeometry shape="icosahedron" color="#8b5cf6" position={[-5, 3, -4]} scale={0.8} speed={0.15} />
@@ -57,12 +57,12 @@ export default function HeroSection() {
       </div>
 
       {/* Gradient overlays for text readability */}
-      <div className="absolute inset-0 z-10" style={{
-        background: 'linear-gradient(180deg, rgba(3,0,20,0.4) 0%, rgba(3,0,20,0.1) 40%, rgba(3,0,20,0.3) 80%, rgba(3,0,20,0.95) 100%)',
+      <div className="absolute inset-0" style={{
+        background: 'linear-gradient(180deg, rgba(3,0,20,0.4) 0%, rgba(3,0,20,0.1) 40%, rgba(3,0,20,0.3) 80%, rgba(3,0,20,0.95) 100%)', zIndex: 10
       }} />
 
       {/* Content Overlay */}
-      <div ref={textRef} className="relative z-[2] flex flex-col items-center justify-center h-full text-center" style={{ padding: '0 24px' }}>
+      <div ref={textRef} className="relative flex flex-col items-center justify-center h-full text-center" style={{ zIndex: 10, padding: '0 24px' }}>
         <div style={{ perspective: 800, marginTop: '15vh' }}>
           {/* Status badge */}
           <motion.div

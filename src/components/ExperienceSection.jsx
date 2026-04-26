@@ -77,7 +77,7 @@ export default function ExperienceSection() {
   return (
     <section id="experience" ref={sectionRef} className="relative section-padding">
       {/* 3D Floating Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
+      <div className="absolute inset-0 pointer-events-none opacity-60" style={{ zIndex: 0 }}>
         <Canvas camera={{ position: [0, 0, 8] }}>
           <ambientLight intensity={0.5} />
           <FloatingGeometry shape="octahedron" color="#f59e0b" position={[5, 2, -2]} scale={0.6} speed={0.25} />
@@ -86,7 +86,7 @@ export default function ExperienceSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative" style={{ zIndex: 10 }}>
         {/* Section label */}
         <div className="exp-heading" style={{ marginBottom: 16 }}>
           <span style={{

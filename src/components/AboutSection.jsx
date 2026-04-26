@@ -43,7 +43,7 @@ export default function AboutSection() {
   return (
     <section id="about" ref={sectionRef} className="relative section-padding" style={{ background: 'var(--bg-primary)' }}>
       {/* Background 3D */}
-      <div className="absolute inset-0 z-0 opacity-40" style={{ pointerEvents: 'none' }}>
+      <div className="absolute inset-0 opacity-40" style={{ zIndex: 0, pointerEvents: 'none' }}>
         <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
           <ambientLight intensity={0.3} />
           <pointLight position={[5, 5, 5]} intensity={0.5} color="#8b5cf6" />
@@ -57,7 +57,7 @@ export default function AboutSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative" style={{ zIndex: 10 }}>
         {/* Section label */}
         <div className="about-heading" style={{ marginBottom: 16 }}>
           <span style={{

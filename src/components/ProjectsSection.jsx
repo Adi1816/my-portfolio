@@ -93,7 +93,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" ref={sectionRef} className="relative section-padding bg-grid">
       {/* 3D Floating Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-50">
+      <div className="absolute inset-0 pointer-events-none opacity-50" style={{ zIndex: 0 }}>
         <Canvas camera={{ position: [0, 0, 8] }}>
           <ambientLight intensity={0.5} />
           <FloatingGeometry shape="torusKnot" color="#f43f5e" position={[-6, 3, -4]} scale={0.6} speed={0.2} />
@@ -103,7 +103,7 @@ export default function ProjectsSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative" style={{ zIndex: 10 }}>
         {/* Section label */}
         <div className="proj-heading" style={{ marginBottom: 16 }}>
           <span style={{

@@ -54,7 +54,7 @@ export default function ContactSection() {
   return (
     <section id="contact" ref={sectionRef} className="relative section-padding" style={{ background: 'var(--bg-primary)' }}>
       {/* Background 3D */}
-      <div className="absolute inset-0 z-0 opacity-30" style={{ pointerEvents: 'none' }}>
+      <div className="absolute inset-0 opacity-30" style={{ zIndex: 0, pointerEvents: 'none' }}>
         <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
           <ambientLight intensity={0.2} />
           <pointLight position={[5, 5, 5]} intensity={0.4} color="#8b5cf6" />
@@ -65,7 +65,7 @@ export default function ContactSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative" style={{ zIndex: 10 }}>
         {/* Section label */}
         <div className="contact-heading" style={{ marginBottom: 16 }}>
           <span style={{

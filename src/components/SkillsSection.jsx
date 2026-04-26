@@ -99,7 +99,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" ref={sectionRef} className="relative section-padding">
       {/* 3D Floating Background Elements */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-60">
+      <div className="absolute inset-0 pointer-events-none opacity-60" style={{ zIndex: 0 }}>
         <Canvas camera={{ position: [0, 0, 8] }}>
           <ambientLight intensity={0.5} />
           <FloatingGeometry shape="dodecahedron" color="#f43f5e" position={[-5, 3, -2]} scale={0.5} speed={0.2} />
@@ -109,7 +109,7 @@ export default function SkillsSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-10">
+      <div className="section-container relative" style={{ zIndex: 10 }}>
         {/* Section label */}
         <div className="skills-heading" style={{ marginBottom: 16 }}>
           <span style={{

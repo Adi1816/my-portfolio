@@ -82,6 +82,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
+  transform: translateZ(0);
 }
 
 .glass-sm {
@@ -90,6 +91,7 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
+  transform: translateZ(0);
 }
 
 /* ===== GRADIENT TEXT ===== */
