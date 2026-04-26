@@ -109,7 +109,7 @@ export default function SkillsSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-[1]">
+      <div className="section-container relative z-10">
         {/* Section label */}
         <div className="skills-heading" style={{ marginBottom: 16 }}>
           <span style={{

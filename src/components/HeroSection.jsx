@@ -57,7 +57,7 @@ export default function HeroSection() {
       </div>
 
       {/* Gradient overlays for text readability */}
-      <div className="absolute inset-0 z-[1]" style={{
+      <div className="absolute inset-0 z-10" style={{
         background: 'linear-gradient(180deg, rgba(3,0,20,0.4) 0%, rgba(3,0,20,0.1) 40%, rgba(3,0,20,0.3) 80%, rgba(3,0,20,0.95) 100%)',
       }} />
 

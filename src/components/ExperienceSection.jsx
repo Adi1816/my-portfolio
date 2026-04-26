@@ -86,7 +86,7 @@ export default function ExperienceSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-[1]">
+      <div className="section-container relative z-10">
         {/* Section label */}
         <div className="exp-heading" style={{ marginBottom: 16 }}>
           <span style={{

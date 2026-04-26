@@ -65,7 +65,7 @@ export default function ContactSection() {
         </Canvas>
       </div>
 
-      <div className="section-container relative z-[1]">
+      <div className="section-container relative z-10">
         {/* Section label */}
         <div className="contact-heading" style={{ marginBottom: 16 }}>
           <span style={{
